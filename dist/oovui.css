@@ -1,0 +1,11 @@
+
+button {
+  color: red;
+}
+oov-button {
+  background: gray;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+}
+
+/*# sourceMappingURL=OButton.vue.map */
