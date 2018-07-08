@@ -24,6 +24,9 @@ Import the CSS:
 import '@oovui/vueui/dist/oovui.css';
 ```
 
+# Warning:
+
+This ui library is Work In Progress, just for study.  Pls do not use it in the production environment。
 
 # Documentation is Work In Progress
 
