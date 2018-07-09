@@ -1,7 +1,19 @@
 // oovui 的Color体系，主要参考ant.design的色彩体系，但进行了大大的简化
 
 
-// 提供一种主色:primary
+// 提供一种主色:primary 
 $oov-primary-color:#1890ff;  
 
-// 提供四种辅助色: Success,Warning,Danger(Error),Info
+// 提供四种辅助色: Success ,Warning ,Danger(Error)  ,Info
+$oov-success-color:#52c41a;
+$oov-warning-color:#faad14;
+$oov-danger-color: #f5222d;
+$oov-error-color:  #f5222d;
+$oov-info-color:   #91d5ff;
+
+
+// 中性色主要被大量的应用在界面的文字部分，此外背景、边框、分割线、等场景中也非常常见。
+
+
+
+// 每一中主色和辅助色可以设置hover色，active色
