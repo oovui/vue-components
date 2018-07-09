@@ -9,6 +9,17 @@ import css from 'rollup-plugin-css-only'
 import CleanCSS from 'clean-css'
 import autoprefixer from 'autoprefixer'
 const config = require('../package.json')
+const banner =
+  '/*!\n' +
+  ' *  @oovui/vueui v' + config.version + '\n' +
+  ' * (c) 2018-' + new Date().getFullYear() + ' itshizhan@163.com\n' +
+  ' * Released under the MIT License.\n' +
+  ' */';
+
+export {
+  banner
+} 
+
 
 export default {
   input: 'packages/index.js',
@@ -42,7 +53,7 @@ export default {
     replace({
       VERSION: JSON.stringify(config.version),
     }),
-  ],
+  ]
   // watch: {
   //   include: 'packages/**',
   // },
