@@ -34,6 +34,7 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
     "babel-preset-vue": "^2.0.2",
     "clean-css": "^4.1.11",
     "minipass": "^2.3.3",

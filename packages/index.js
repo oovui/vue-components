@@ -20,7 +20,6 @@ const plugin = {
 }
 
 
-
  export default plugin
 
  // Auto-install

@@ -1,0 +1,35 @@
+/*
+//defined margin and padding for short:mt,mb,mr,ml,pt,pb,pr,pl:5-50
+*/
+@mixin margin-padding($attr,$dir,$i){
+  #{$attr}-#{$dir}:5px*$i !important;
+}
+@for $i from 1 through 10{
+  .mt#{$i*5} {
+    @include margin-padding("margin","top",$i);
+  }
+  .mb#{$i*5} {
+    @include margin-padding("margin","bottom",$i);
+  }
+  .ml#{$i*5} {
+    @include margin-padding("margin","left",$i);
+  }
+  .mr#{$i*5} {
+    @include margin-padding("margin","right",$i);
+  }
+  .pt#{$i*5} {
+    @include margin-padding("padding","top",$i);
+  }
+  .pb#{$i*5} {
+    @include margin-padding("padding","bottom",$i);
+  }
+  .pl#{$i*5} {
+    @include margin-padding("padding","left",$i);
+  }
+  .pr#{$i*5} {
+    @include margin-padding("padding","right",$i);
+  }
+}
+
+$baseFontSize:   14px !default;
+$baseLineHeight: 1.5 !default;
