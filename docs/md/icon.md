@@ -9,7 +9,9 @@ oovui 的图标基于开源的 [feather-icons](https://github.com/feathericons/f
 
 使用<Icon />组件，其中type为必须的属性：
 ```js
-<Icon type="x" color="#323232" size="20"></Icon>
+<Icon type = "x"></Icon>
+<Icon type = "circle" color = "red"></Icon>
+<Icon type= "airplay" color = "#323232" size = "20"></Icon>
 ```
 
 ## API
