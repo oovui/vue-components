@@ -1,4 +1,211 @@
-oov-button{
-  background: gray;
-  transform: rotate(1deg)
+
+$btnPrefix:".#{$oovPrefix}-btn"; 
+
+//占位符不会生成单独的类，相比mixin又可以合并代码
+%btn-basic{
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; 
+    white-space: nowrap;
+    line-height: 1.5;
+    user-select: none;
+    padding: 6px 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    outline: none;
+
+    background-color: $white;
+    color: rgba($black,.65); 
+    border: 1px solid $grey5;
+
+    transition: color .2s linear,background-color .2s linear,border .2s linear;
+    
+}
+
+//默认按钮
+#{$btnPrefix}-default {
+  @extend %btn-basic; 
+  // 在Sass中可以使用&和伪元素、伪类、多类配合使用。就是用&替代元素自身。
+  // &和相连的类名之间不能有任何的空格，不然就会变成CSS选择器中的后代选择器  
+  &:hover,
+  &.hover {
+    color: $blue6;
+    background-color: transparent;
+    border: 1px solid $blue6;
+  }
+
+  &:active,
+  &.active {
+    color: rgba($black,.75); 
+    border: 1px solid $grey7;
+  }
+
+}
+//ok
+#{$btnPrefix}-primary {
+  @extend %btn-basic; 
+  background-color: $blue6;
+  border: 1px solid transparent;
+  color: rgba($white,1); 
+
+  &:hover,
+  &.hover {
+    background-color:$blue4;
+    border: 1px solid transparent;
+    color: rgba($white,0.65); 
+  }
+
+  &:active,
+  &.active {
+    background-color:$blue7;
+    border: 1px solid transparent;
+    color: rgba($white,0.95); 
+  }
+}
+
+#{$btnPrefix}-dashed {
+  @extend %btn-basic; 
+  background-color: $white;
+  border: 1px dashed $grey5;
+  color: rgba($black,0.65);
+
+  &:hover,
+  &.hover {
+    color: $blue6;
+    background-color: transparent;
+    border: 1px solid $blue6;
+  }
+
+  &:active,
+  &.active {
+    color: rgba($black,.75); 
+    border: 1px solid $grey7;
+  }
+
+}
+
+
+#{$btnPrefix}-ghost {
+  @extend %btn-basic; 
+  background-color: transparent;
+  border:1px solid $grey5;
+  color: rgba($black,0.65);
+
+  &:hover,
+  &.hover {
+    color: $blue6;
+    background-color: transparent;
+    border: 1px solid $blue6;
+  }
+
+  &:active,
+  &.active {
+    color: $blue7;
+    background-color: transparent;
+    border: 1px solid $blue7;
+  }
+ 
+}
+
+#{$btnPrefix}-text {
+  @extend %btn-basic; 
+  background-color: transparent;
+  border: none;
+  color: rgba($black,0.65);
+
+  &:hover,
+  &.hover {
+    color: $blue6;
+    background-color: transparent;
+    border: none;
+  }
+
+  &:active,
+  &.active {
+    color: rgba($black,.75); 
+    background-color: transparent;
+    border: none;
+  }
+}
+
+//直角矩形按钮
+#{$btnPrefix}-rectangle {
+  @extend %btn-basic; 
+  border-radius: 0;
+}
+
+//全圆角按钮，适用于无文字，按钮文字仅为icon的按钮
+#{$btnPrefix}-circle {
+  @extend %btn-basic; 
+  border-radius: 32px;
+}
+
+
+//小尺寸按钮
+#{$btnPrefix}-small {
+  @extend %btn-basic; 
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+
+//大尺寸按钮，适用于无文字，按钮文字仅为icon的按钮
+#{$btnPrefix}-large {
+  @extend %btn-basic; 
+  padding: 7px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+ 
+}
+
+
+//全尺寸按钮
+#{$btnPrefix}-full {
+  @extend %btn-basic; 
+  width: 100%;
+}
+
+//disabled 按钮样式:'default','primary', 'ghost', 'dashed', 'text'
+//可以用空格或,初始化list列表，如果没有特殊字符，引号可以省略
+$btnTypeList:"default","primary","ghost","dashed","text";
+$btnTypeLen:length($btnTypeList);
+@for $i from 1 through $btnTypeLen {
+  #{$btnPrefix}-#{nth($btnTypeList,$i)}[disabled] {
+    color: #c3cbd6;
+    background-color: #f7f7f7;
+    border-color: #d7dde4;
+  }
+}
+
+
+// 按钮加载中
+.#{$oovPrefix}-load-loop{
+ animation: ani-load-loop 1s linear infinite
+}
+
+
+@keyframes ani-load-loop {
+    0% {
+        transform: rotate(0)
+    }
+
+    50% {
+        transform: rotate(180deg)
+    }
+
+    to {
+        //turn是圈,1turn = 360deg
+        transform: rotate(1turn)
+    }
+}
+//注意pointer-events，意思是禁止一切鼠标事件
+#{$btnPrefix}-loading{
+  //当前ie不兼容，TODO
+  pointer-events:none;
 }
