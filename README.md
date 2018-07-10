@@ -32,8 +32,10 @@ This ui library is Work In Progress, just for study.  Pls do not use it in the p
 
 
 # TODO
+- [x] color
+- [x] font
 - [x] utilities
-- [ ] color
+- [x] icon
 - [ ] button
 - [ ] grid
 - [ ] input
