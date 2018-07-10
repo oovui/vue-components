@@ -24,6 +24,7 @@
     "access": "public"
   },
   "dependencies": {
+    "feather-icons": "^4.7.3",
     "vue": "^2.5.16",
     "vue-hot-reload-api": "^2.3.0"
   },

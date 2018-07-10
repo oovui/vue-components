@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import Home from './components/Home.vue';
-import Buttons from './components/Buttons';
+import Buttons from './components/Buttons.vue';
 
 const routes = [
 
