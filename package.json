@@ -12,6 +12,8 @@
   "module": "dist/oovui.esm.js",
   "scripts": {
     "dev": "parcel ./demos/index.html",
+    "dev:docs": "vuepress dev docs",
+    "build:docs": "vuepress build docs",
     "build:umd": "rollup --config build/rollup.config.umd.js",
     "build:esm": "rollup --config build/rollup.config.esm.js",
     "build:lib": "npm run build:umd && npm run build:esm"
@@ -25,7 +27,9 @@
   },
   "dependencies": {
     "feather-icons": "^4.7.3",
+    "highlight.js": "^9.12.0",
     "vue": "^2.5.16",
+    "vue-highlight.js": "^2.2.0",
     "vue-hot-reload-api": "^2.3.0"
   },
   "devDependencies": {
@@ -38,6 +42,8 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-vue": "^2.0.2",
     "clean-css": "^4.1.11",
+    "less": "^3.7.1",
+    "less-loader": "^4.1.0",
     "minipass": "^2.3.3",
     "node-sass": "^4.9.2",
     "parcel-bundler": "^1.9.4",
@@ -52,6 +58,7 @@
     "rollup-plugin-vue": "^4.3.0",
     "sass-loader": "^7.0.3",
     "vue-router": "^3.0.1",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "vuepress": "^0.11.0"
   }
 }
