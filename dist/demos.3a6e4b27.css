@@ -39,14 +39,3 @@ h1 {
 .right-demos {
   width: 80%;
   padding: 20px; }
-
-button {
-  color: red;
-}
-oov-button {
-  background: gray;
-  -webkit-transform: rotate(1deg);
-          transform: rotate(1deg);
-}
-
-/*# sourceMappingURL=OButton.vue.map */

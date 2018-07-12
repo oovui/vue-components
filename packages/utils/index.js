@@ -1,4 +1,4 @@
-const Utils={
+const Utils = {
   // 判断参数是否是其中之一
   oneOf (value, validList) {
     for (let i = 0; i < validList.length; i++) {
@@ -11,4 +11,5 @@ const Utils={
 
 }
 
+export const oneOf = Utils.oneOf;
 export default Utils

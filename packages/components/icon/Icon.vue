@@ -3,7 +3,7 @@
 </template>
 <script>
 import feather from 'feather-icons';
-import utils from '../../utils/index.js';
+import { oneOf } from '../../utils/index.js';
 export default {
   name:'Icon',
   data(){
@@ -34,7 +34,7 @@ export default {
   props:{
     type:{
       validator(value) {
-        return utils.oneOf(value, [
+        return oneOf(value, [
           'activity',
           'airplay',
           'alert-circle',
