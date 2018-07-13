@@ -42,5 +42,17 @@ This ui library is Work In Progress, just for study.  Pls do not use it in the p
 - [ ] radio
 - [ ] checkbox
 - [ ] tab
+- [ ] dotdotdot
+- [ ] form
+- [ ] alert
+- [ ] message
+- [ ] modal
+- [ ] layout
+- [ ] datepicker
+- [ ] select
+- [ ] switch
+- [ ] list
+- [ ] page
+
 
 
