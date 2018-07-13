@@ -1,6 +1,6 @@
 # Icon 图标
 
-oovui 的图标基于开源的 [feather-icons](https://github.com/feathericons/feather) svg icons 进行封装。
+oovui 的图标使用vue支持的svg，基于开源的 [feather-icons](https://github.com/feathericons/feather) 进行封装。
 
 ## 兼容性支持
 支持svg的浏览器，IE9+
