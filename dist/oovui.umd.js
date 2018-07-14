@@ -2297,6 +2297,8 @@
 
 	var Icon = __vue_normalize__({ render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, __vue_create_injector__, undefined);
 
+	var btnClassPrefix = "oov-btn";
+
 	var script$1 = {
 	  name: "OButton",
 	  components: {
@@ -2348,9 +2350,7 @@
 	    classes: function classes() {
 	      var _ref;
 
-	      return [(_ref = {
-	        btnClassPrefix: true
-	      }, _defineProperty(_ref, prefixCls + "-" + this.type, !!this.type), _defineProperty(_ref, prefixCls + "-" + this.shape, !!this.shape), _defineProperty(_ref, prefixCls + "-" + this.size, !!this.size), _defineProperty(_ref, prefixCls + "-loading", this.loading != null && this.loading), _ref)];
+	      return [btnClassPrefix, (_ref = {}, _defineProperty(_ref, btnClassPrefix + "-" + this.type, !!this.type), _defineProperty(_ref, btnClassPrefix + "-" + this.shape, !!this.shape), _defineProperty(_ref, btnClassPrefix + "-" + this.size, !!this.size), _defineProperty(_ref, btnClassPrefix + "-loading", this.loading != null && this.loading), _ref)];
 	    }
 	  },
 	  methods: {
