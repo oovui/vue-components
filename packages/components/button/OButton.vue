@@ -72,12 +72,12 @@ export default {
   computed: {
     classes() {
       return [
+        btnClassPrefix,
         {
-          btnClassPrefix: true,
-          [`${prefixCls}-${this.type}`]: !!this.type,
-          [`${prefixCls}-${this.shape}`]: !!this.shape,
-          [`${prefixCls}-${this.size}`]: !!this.size,
-          [`${prefixCls}-loading`]: this.loading != null && this.loading
+          [`${btnClassPrefix}-${this.type}`]: !!this.type,
+          [`${btnClassPrefix}-${this.shape}`]: !!this.shape,
+          [`${btnClassPrefix}-${this.size}`]: !!this.size,
+          [`${btnClassPrefix}-loading`]: this.loading != null && this.loading
         }
       ];
     }

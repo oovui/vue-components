@@ -90,7 +90,7 @@ export default {
   }
 
   &:not(:first-child) {
-    margin-top: 40px;
+    margin-top: 10px;
   }
 }
 </style>
