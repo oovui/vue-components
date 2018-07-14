@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'DemoPage',
+  name: 'DemoCode',
   props: ['title', 'description'],
   data() {
     return {
@@ -42,7 +42,7 @@ export default {
       padding: 0;
       margin: 0;
       border-bottom: none;
-      font-size: 18px;
+      font-size: 22px;
     }
 
     small {
@@ -60,7 +60,8 @@ export default {
       0 1px 2px 0 rgba(232, 237, 250, 0.5);
     .code-content {
       display: flex;
-      justify-content: center;
+      //justify-content: center;
+      justify-content: space-around;
       align-items: center;
       box-sizing: border-box;
       padding: 4%;

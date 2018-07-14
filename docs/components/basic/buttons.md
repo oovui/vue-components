@@ -1,26 +1,49 @@
 # Button 组件
----
 
-<Common-Democode title="基本用法" description="基本按钮用法">
-  <test-test1></test-test1>
-  <highlight-code slot="codeText" lang="vue">
-    <template>
-      <div class="demo-button">
-        <div>
-          <dt-button>默认按钮</dt-button>
-          <dt-button type="primary">主要按钮</dt-button>
-          <dt-button type="success">成功按钮</dt-button>
-          <dt-button type="info">信息按钮</dt-button>
-          <dt-button type="warning">警告按钮</dt-button>
-          <dt-button type="danger">危险按钮</dt-button>
-        </div>
-      </div>
-    </template>
-  </highlight-code>
-</Common-Democode>
+Button 组件用于生成一个原生的button标签。
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
+## 按钮类型
+按钮类型有6种：
+
+默认按钮(`default`), 品牌按钮(`primary`),信息按钮(`info`),成功按钮(`success`),警告按钮(`warning`),危险或错误按钮(`danger/error`).
+
+## 图标按钮
+
+当需要在 Button 内嵌入 Icon 时，可以设置 icon 属性，或者直接在 Button 内使用 Icon 组件。
+
+如果想控制 Icon 具体的位置（默认在左边），只能直接使用 Icon 组件，而非 icon 属性。
+
+
+
+## 按钮尺寸和形状
+
+按钮有大、中、小及全屏四种尺寸：
+
+通过设置 size 为 large, small,full 分别把按钮设为大、小、全屏尺寸。若不设置 size，则尺寸默认为中。
+
+按钮形状：
+通过设置shape属性为circle，可将按钮置为圆的形状。
+
+## 按钮状态：不可用
+添加 disabled 属性即可让按钮处于不可用状态，同时按钮样式也会改变。
+
+## 按钮状态：加载中
+添加 loading 属性即可让按钮处于加载状态，最后两个按钮演示点击后进入加载状态。
+
+## 按钮组合
+
+`oovui1.1`支持
+
+## API
+
+通过设置 Button 的属性来产生不同的按钮样式，推荐顺序为：type -> shape -> size -> loading -> disabled
+按钮的属性说明如下：
+
+| 属性       | 说明           | 类型  | 默认值 |
+| ------------- |:-------------:|:-------------:| -----:|
+| type     | 设置按钮类型，可选值为: | String  | default  |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
+
+
+

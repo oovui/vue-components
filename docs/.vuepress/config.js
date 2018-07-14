@@ -11,13 +11,13 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' }, // 导航条
       { text: '组件', link: '/components/guides/get-start.html' },
-      { text: '更新日志', link: 'https://github.com/oovui/vueui' },
+      { text: '更新日志', link: 'https://github.com/oovui/vueui/changelog.md' },
       {
         text: '生态',
         // 这里是下拉列表展现形式。
         items: [
           { text: 'oovui-cli', link: 'https://github.com/oovui/vueui' },
-          { text: 'oovui/admin', link: 'https://github.com/oovui/vueui' },
+          { text: 'oovui/admin', link: 'https://github.com/oovui/admin' },
         ]
       }
     ],

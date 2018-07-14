@@ -3,16 +3,32 @@
 oovui 的图标使用vue支持的svg，基于开源的 [feather-icons](https://github.com/feathericons/feather) 进行封装。
 
 ## 兼容性支持
+<br/>
 支持svg的浏览器，IE9+
 
 ## 如何使用
+<br/>
+使用Icon组件，其中type为必须的属性：
 
-使用<Icon />组件，其中type为必须的属性：
+
 ```js
 <Icon type = "x"></Icon>
 <Icon type = "circle" color = "red"></Icon>
-<Icon type= "airplay" color = "#323232" size = "20"></Icon>
+<Icon type = "airplay" color = "#323232" size = "20"></Icon>
 ```
+
+<DemoCode title="基本用法" description="基本Icon用法">
+  <Icon type = "x"></Icon>
+  <Icon type = "circle" color = "red"></Icon>
+  <Icon type = "airplay" color = "#323232" size = "20"></Icon>
+  <highlight-code slot="codeText" lang="vue">
+    <Icon type = "x"></Icon>
+    <Icon type = "circle" color = "red"></Icon>
+    <Icon type = "airplay" color = "#323232" size = "20"></Icon>
+  </highlight-code>
+</DemoCode>
+
+
 
 ## API
 
