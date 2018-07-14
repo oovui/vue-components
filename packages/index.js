@@ -1,6 +1,8 @@
 import OButton from './components/button/OButton.vue'
+import Icon from './components/icon/Icon.vue'
 
 const components = {
+  Icon,
   OButton
 }
 

@@ -1,7 +1,8 @@
 <template>
-    <button :type="htmlType" :class="classes" :disabled="disabled" @click="handleClick">
-        <!-- type="load-a" 定义load的图标 -->
-        <Icon class="oov-load-loop" type="load-a" v-if="loading"></Icon>
+    <button  :type="htmlType" :class="classes" :disabled="disabled" @click="handleClick">
+        <!-- type="circle" 定义load的图标 -->
+        <Icon class="oov-load-loop" type="circle" v-if="loading"></Icon>
+        <Icon :type="icon" v-if="icon && !loading"></Icon>
         <span v-if="showSlot" ref="slot">
             <slot></slot>
         </span>
@@ -9,22 +10,30 @@
 </template>
 
 <script>
-import Utils from "../../utils";
-import Icon from "../icon";
+import { oneOf } from "../../utils";
+import Icon from "../icon/Icon.vue";
+// class 前缀
+import { btnClassPrefix } from '../../config/index';
 
-const prefixCls = "oov-btn";
+
 export default {
   name: "OButton",
+  components:{
+    Icon
+  },
   props: {
-    //button:类型，default,primary,ghost，dashed，text,默认default
+    //button:类型，默认按钮(`default`), 品牌按钮(`primary`),信息按钮(`info`),
+    //成功按钮(`success`),警告按钮(`warning`),危险或错误按钮(`danger/error`).
     type: {
       validator(value) {
-        return Utils.oneOf(value, [
+        return oneOf(value, [
           "default",
           "primary",
-          "ghost",
-          "dashed",
-          "text"
+          "info",
+          "success",
+          "warning",
+          "danger",
+          "error"
         ]);
       },
       default: "default"
@@ -33,13 +42,13 @@ export default {
     //button形状：全圆角和直角，默认是4px圆角
     shape: {
       validator(value) {
-        return Utils.oneOf(value, ["circle", "rectangle"]);
-      }
+        return oneOf(value, ["circle", "rectangle"]);
+      }  
     },
     //button大小:small,large,full
     size: {
       validator(value) {
-        return Utils.oneOf(value, ["small", "large", "full"]);
+        return oneOf(value, ["small", "large", "full"]);
       }
     },
     loading: Boolean,
@@ -47,9 +56,13 @@ export default {
     htmlType: {
       default: "button",
       validator(value) {
-        return Utils.oneOf(value, ["button", "submit", "reset"]);
+        return oneOf(value, ["button", "submit", "reset"]);
       }
-    }
+    },
+    icon: {
+      type: String,
+      default: ''
+    },
   },
   data() {
     return {
@@ -60,6 +73,7 @@ export default {
     classes() {
       return [
         {
+          btnClassPrefix: true,
           [`${prefixCls}-${this.type}`]: !!this.type,
           [`${prefixCls}-${this.shape}`]: !!this.shape,
           [`${prefixCls}-${this.size}`]: !!this.size,
@@ -88,5 +102,5 @@ export default {
 <style lang="scss">
 //base
 @import "../../styles/index";
-@import "./this.scss";
+//@import "./this.scss";
 </style>
