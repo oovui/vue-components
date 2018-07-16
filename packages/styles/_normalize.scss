@@ -137,14 +137,14 @@ a {
     // 2
 
     &:focus {
-        outline: thin dotted;
+        outline: none;
     }
 
     // 3
 
     &:hover,
     &:active {
-        outline: 0;
+        outline: none;
     }
 }
 

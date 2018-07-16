@@ -44,10 +44,10 @@ a {
   background: transparent;
 }
 a:focus {
-    outline: thin dotted;
+    outline: none;
 }
 a:hover, a:active {
-    outline: 0;
+    outline: none;
 }
 h1 {
   font-size: 2em;

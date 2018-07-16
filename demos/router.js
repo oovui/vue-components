@@ -4,11 +4,13 @@ Vue.use(VueRouter)
 
 import Home from './components/Home.vue';
 import Buttons from './components/Buttons.vue';
+import SlotDemo from './pages/SlotDemo.vue';
 
 const routes = [
 
   { path: '/', component: Home },
-  { path: '/buttons', component: Buttons }
+  { path: '/buttons', component: Buttons },
+  { path: '/slotdemo', component: SlotDemo }
 
 ]
 

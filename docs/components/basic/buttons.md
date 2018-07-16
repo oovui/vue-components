@@ -14,7 +14,7 @@ Button 组件用于生成一个原生的button标签。
   <OButton type="info">Info</OButton>
   <OButton type="success">Success</OButton>
   <OButton type="warning">Warning</OButton>
-   <OButton type="danger">Danger</OButton>
+  <OButton type="danger">Danger</OButton>
   <highlight-code slot="codeText" lang="vue">
     <OButton>Default</OButton>
     <OButton type="primary">Primary</OButton>
@@ -86,7 +86,7 @@ Button 组件用于生成一个原生的button标签。
   <OButton type="info" disabled>Info</OButton>
   <OButton type="success" disabled>Success</OButton>
   <OButton type="warning" disabled>Warning</OButton>
-   <OButton type="danger" disabled>Danger</OButton>
+  <OButton type="danger" disabled>Danger</OButton>
   <highlight-code slot="codeText" lang="vue">
     <OButton disabled>Default</OButton>
     <OButton type="primary" disabled>Primary</OButton>
@@ -111,6 +111,10 @@ Button 组件用于生成一个原生的button标签。
 ## 按钮组合
 
 `oovui1.1`支持
+
+<DemoBlock>
+  <OButton type="primary" loading>Loading…</OButton>
+</DemoBlock>
 
 ## API
 

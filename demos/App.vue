@@ -6,6 +6,7 @@
         <div class="left-nav">
           <router-link to="/">Home</router-link>
           <router-link to="/buttons">Buttons</router-link>
+          <router-link to="/slotdemo">SlotDemo</router-link>
         </div>
         <div class ="right-demos">
           <router-view></router-view>
