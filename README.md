@@ -2,12 +2,12 @@
 a UI components library based on vue
 
 # Installation
-Install the @oovui/vueui package:
+Install the @oovui/vue package:
 
 ```sh
-npm i -S @oovui/vueui 
+npm i -S @oovui/vue 
 # or
-yarn add  @oovui/vueui 
+yarn add  @oovui/vue 
 ```
 Install the Vue plugin:
 
