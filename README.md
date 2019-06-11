@@ -13,7 +13,7 @@ Install the Vue plugin:
 
 ```javascript
 import Vue from 'vue'
-import oovui from '@oovui/vueui'
+import oovui from '@oovui/vue'
 
 Vue.use(oovui)
 ```
@@ -21,7 +21,7 @@ Vue.use(oovui)
 Import the CSS:
 
 ```javascript
-import '@oovui/vueui/dist/oovui.css';
+import '@oovui/vue/dist/oovui.css';
 ```
 
 # Warning:

@@ -1,3 +1,4 @@
+
 .DS_Store
 node_modules
 
@@ -22,12 +23,6 @@ yarn-error.log*
 .cache
 
 __TEST__
-dist/demos.3a6e4b27.css
-
-dist/demos.3a6e4b27.css
-
-dist/demos.3a6e4b27.js
-
-dist/demos.3a6e4b27.map
-
-dist/demos.3a6e4b27.map
+dist/demos.*.css
+dist/demos.*.js
+dist/demos.*.map
