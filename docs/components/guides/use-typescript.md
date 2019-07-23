@@ -1,1 +1,0 @@
-# 在typescript中使用

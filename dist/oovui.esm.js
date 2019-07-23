@@ -1,5 +1,5 @@
 /*!
- *  @oovui/vue v0.0.1
+ *  @oovui/vue v0.0.2
  * (c) 2018-2019 itshizhan@163.com
  * Released under the MIT License.
  */
@@ -334,7 +334,7 @@ var install = function install(Vue) {
 
 var plugin = {
   //eslint-disable-next-line no-undef
-  version: "0.0.1",
+  version: "0.0.2",
   install: install
 };
 

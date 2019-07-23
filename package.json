@@ -12,8 +12,8 @@
   "module": "dist/oovui.esm.js",
   "scripts": {
     "dev": "parcel ./demos/index.html",
-    "dev:docs": "vuepress dev docs",
-    "build:docs": "vuepress build docs",
+    "docs:dev": "cd doc && vuepress dev docs",
+    "docs:build": "cd doc && vuepress build docs",
     "build:umd": "rollup --config build/rollup.config.umd.js",
     "build:esm": "rollup --config build/rollup.config.esm.js",
     "build:lib": "rm -rf dist && mkdir dist && npm run build:umd && npm run build:esm",
@@ -27,12 +27,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.5",
     "feather-icons": "^4.7.3",
-    "highlight.js": "^9.12.0",
-    "vue": "^2.6.10",
-    "vue-highlight.js": "^2.2.0",
-    "vue-hot-reload-api": "^2.3.0"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -40,6 +36,7 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@types/vue-router": "^2.0.0",
+    "@babel/runtime": "^7.4.5",
     "autoprefixer": "^9.6.0",
     "clean-css": "^4.1.11",
     "dart-sass": "^1.21.0",

@@ -318,4 +318,10 @@ export default {
 
 }
 </script>
+<style scoped>
+.oov-icon{
+  display: inline-block;
+}
+</style>
+
 

@@ -100,7 +100,6 @@ export default {
 
 
 <style lang="scss">
-//base
 @import "../../styles/index";
 //@import "./this.scss";
 </style>

@@ -8,7 +8,7 @@ import router from './router.js';
 import oovui from '../dist/oovui.esm.js';
 
 Vue.use(oovui);
-// import '../dist/oovui.css';
+import '../dist/oovui.css';
 
 new Vue({
   el: '#app',
