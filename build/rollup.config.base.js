@@ -31,8 +31,8 @@ export default {
     requireContext(),
     css({
       output: function (style, styleNodes) {
-        //fs.writeFileSync('dist/oovui.css', new CleanCSS().minify(style).styles)
-        fs.writeFileSync('dist/oovui.css', style);
+        //fs.writeFileSync('lib/oovui.css', new CleanCSS().minify(style).styles)
+        fs.writeFileSync('lib/oovui.css', style);
       },
     }),
     vue({

@@ -4,19 +4,25 @@
   "description": "a UI components library based on vue",
   "author": "itshizhan@163.com",
   "keywords": [
+    "oovui",
     "vueui",
-    "vuejs"
+    "vue",
+    "vue.js",
+    "ui",
+    "component"
+  ],
+  "files": [
+    "lib",
+    "packages"
   ],
   "license": "MIT",
-  "main": "dist/oovui.umd.js",
-  "module": "dist/oovui.esm.js",
+  "main": "lib/oovui.umd.js",
+  "module": "lib/oovui.esm.js",
   "scripts": {
     "dev": "parcel ./demos/index.html",
-    "docs:dev": "cd doc && vuepress dev docs",
-    "docs:build": "cd doc && vuepress build docs",
     "build:umd": "rollup --config build/rollup.config.umd.js",
     "build:esm": "rollup --config build/rollup.config.esm.js",
-    "build:lib": "rm -rf dist && mkdir dist && npm run build:umd && npm run build:esm",
+    "build:lib": "rm -rf lib && mkdir lib && npm run build:umd && npm run build:esm",
     "pub": "npm publish"
   },
   "repository": "https://github.com/oovui/vue-components",

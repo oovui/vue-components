@@ -4,7 +4,7 @@ const config = Object.assign({}, base, {
   output: {
 
     name: 'oovui',
-    file: 'dist/oovui.umd.js',
+    file: 'lib/oovui.umd.js',
     format: 'umd',
     banner,
     globals: {

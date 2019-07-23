@@ -46,6 +46,7 @@ export default {
     line-height: 60px;
     background: #e5f6e7;
     padding-left: 20px;
+    margin: 0!important;
   }
   .content-wrap{
     display: table;
@@ -53,7 +54,8 @@ export default {
     height: 100%;
   }
   .left-nav,.right-demos{
-    display: table-cell
+    display: table-cell;
+    vertical-align: top;
   }
 
   .left-nav{

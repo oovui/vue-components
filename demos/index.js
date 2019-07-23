@@ -1,14 +1,12 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 import router from './router.js';
-// import oovui from '@oovui/vueui';
-// Vue.use(oovui);
-// import '@oovui/vueui/dist/oovui.css';
 
-import oovui from '../dist/oovui.esm.js';
+import oovui from '../lib/oovui.esm.js';
 
 Vue.use(oovui);
-import '../dist/oovui.css';
+
+import '../lib/oovui.css';
 
 new Vue({
   el: '#app',
