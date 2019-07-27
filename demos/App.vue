@@ -1,12 +1,13 @@
 <template lang="html">
   <div id="app">
-    <h1>vueui demo</h1>
+    <h1 class="top">vueui demo</h1>
     <hr/>
     <div class="content-wrap">
         <div class="left-nav">
           <router-link to="/">Home</router-link>
           <router-link to="/buttons">Buttons</router-link>
           <router-link to="/slotdemo">SlotDemo</router-link>
+          <router-link to="/inputdemo">InputDemo</router-link>
         </div>
         <div class ="right-demos">
           <router-view></router-view>
@@ -41,7 +42,7 @@ export default {
       height: 100%;
   }
 
-  h1{
+  h1.top{
     height: 60px;
     line-height: 60px;
     background: #e5f6e7;

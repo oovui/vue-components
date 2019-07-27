@@ -28,3 +28,4 @@ dist/demos.*.js
 dist/demos.*.map
 docs
 doc
+demos
