@@ -26,7 +26,6 @@ __TEST__
 dist/demos.*.css
 dist/demos.*.js
 dist/demos.*.map
-docs
 doc/node_modules
 doc/docs/.vuepress
 demos/node_modules
