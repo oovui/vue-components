@@ -28,18 +28,18 @@ export default {
       dedupe:['vue','feather-icons']
     }),
     cjs(),
-    requireContext(),
-    css({
-      output: function (style, styleNodes) {
-        //fs.writeFileSync('lib/oovui.css', new CleanCSS().minify(style).styles)
-        fs.writeFileSync('lib/oovui.css', style);
-      },
-    }),
+    requireContext(), 
     vue({
       css:false,
       style:{
         postcssPlugins:[autoprefixer]
       }
+    }),
+    css({
+      output: function (style, styleNodes) {
+        //fs.writeFileSync('lib/oovui.css', new CleanCSS().minify(style).styles)
+        fs.writeFileSync('lib/oovui.css', style);
+      },
     }),
     babel({
       exclude: 'node_modules/**',
@@ -55,7 +55,7 @@ export default {
   external: [ 
     //不被打包的库，比如在项目中会被引入
     'vue',
-    'feather-icons',
-    '@babel/runtime/helpers/defineProperty'
+    'feather-icons'
+    //,'@babel/runtime/helpers/defineProperty'
   ]
 }

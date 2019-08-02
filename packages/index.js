@@ -1,9 +1,12 @@
 import OButton from './components/button/OButton.vue'
 import Icon from './components/icon/Icon.vue'
+import OInput from './components/input/index'
+
 
 const components = {
   Icon,
-  OButton
+  OButton,
+  OInput
 }
 
 

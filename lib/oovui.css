@@ -182,13 +182,15 @@ table {
 }
 input[type=search] {
   -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 input[type=checkbox], input[type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -443,6 +445,7 @@ input[type=checkbox], input[type=radio] {
 /* https://css-tricks.com/international-box-sizing-awareness-day/ */
 *, *:before, *:after {
   /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+  -webkit-box-sizing: border-box;
   /* Firefox (desktop or Android) 28- */
   /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
   box-sizing: border-box;
@@ -452,3 +455,492 @@ input[type=checkbox], input[type=radio] {
 .oov-icon[data-v-71441546]{
   display: inline-block;
 }
+@charset "UTF-8";
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden], template {
+  display: none;
+}
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+a {
+  background: transparent;
+}
+a:focus {
+  outline: none;
+}
+a:hover, a:active {
+  outline: none;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: "“" "”" "‘" "’";
+}
+q:before, q:after {
+  content: "";
+  content: none;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+button, input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+/*
+//defined margin and padding for short:mt,mb,mr,ml,pt,pb,pr,pl:5-50
+*/
+.mt5 {
+  margin-top: 5px !important;
+}
+.mb5 {
+  margin-bottom: 5px !important;
+}
+.ml5 {
+  margin-left: 5px !important;
+}
+.mr5 {
+  margin-right: 5px !important;
+}
+.pt5 {
+  padding-top: 5px !important;
+}
+.pb5 {
+  padding-bottom: 5px !important;
+}
+.pl5 {
+  padding-left: 5px !important;
+}
+.pr5 {
+  padding-right: 5px !important;
+}
+.mt10 {
+  margin-top: 10px !important;
+}
+.mb10 {
+  margin-bottom: 10px !important;
+}
+.ml10 {
+  margin-left: 10px !important;
+}
+.mr10 {
+  margin-right: 10px !important;
+}
+.pt10 {
+  padding-top: 10px !important;
+}
+.pb10 {
+  padding-bottom: 10px !important;
+}
+.pl10 {
+  padding-left: 10px !important;
+}
+.pr10 {
+  padding-right: 10px !important;
+}
+.mt15 {
+  margin-top: 15px !important;
+}
+.mb15 {
+  margin-bottom: 15px !important;
+}
+.ml15 {
+  margin-left: 15px !important;
+}
+.mr15 {
+  margin-right: 15px !important;
+}
+.pt15 {
+  padding-top: 15px !important;
+}
+.pb15 {
+  padding-bottom: 15px !important;
+}
+.pl15 {
+  padding-left: 15px !important;
+}
+.pr15 {
+  padding-right: 15px !important;
+}
+.mt20 {
+  margin-top: 20px !important;
+}
+.mb20 {
+  margin-bottom: 20px !important;
+}
+.ml20 {
+  margin-left: 20px !important;
+}
+.mr20 {
+  margin-right: 20px !important;
+}
+.pt20 {
+  padding-top: 20px !important;
+}
+.pb20 {
+  padding-bottom: 20px !important;
+}
+.pl20 {
+  padding-left: 20px !important;
+}
+.pr20 {
+  padding-right: 20px !important;
+}
+.mt25 {
+  margin-top: 25px !important;
+}
+.mb25 {
+  margin-bottom: 25px !important;
+}
+.ml25 {
+  margin-left: 25px !important;
+}
+.mr25 {
+  margin-right: 25px !important;
+}
+.pt25 {
+  padding-top: 25px !important;
+}
+.pb25 {
+  padding-bottom: 25px !important;
+}
+.pl25 {
+  padding-left: 25px !important;
+}
+.pr25 {
+  padding-right: 25px !important;
+}
+.mt30 {
+  margin-top: 30px !important;
+}
+.mb30 {
+  margin-bottom: 30px !important;
+}
+.ml30 {
+  margin-left: 30px !important;
+}
+.mr30 {
+  margin-right: 30px !important;
+}
+.pt30 {
+  padding-top: 30px !important;
+}
+.pb30 {
+  padding-bottom: 30px !important;
+}
+.pl30 {
+  padding-left: 30px !important;
+}
+.pr30 {
+  padding-right: 30px !important;
+}
+.mt35 {
+  margin-top: 35px !important;
+}
+.mb35 {
+  margin-bottom: 35px !important;
+}
+.ml35 {
+  margin-left: 35px !important;
+}
+.mr35 {
+  margin-right: 35px !important;
+}
+.pt35 {
+  padding-top: 35px !important;
+}
+.pb35 {
+  padding-bottom: 35px !important;
+}
+.pl35 {
+  padding-left: 35px !important;
+}
+.pr35 {
+  padding-right: 35px !important;
+}
+.mt40 {
+  margin-top: 40px !important;
+}
+.mb40 {
+  margin-bottom: 40px !important;
+}
+.ml40 {
+  margin-left: 40px !important;
+}
+.mr40 {
+  margin-right: 40px !important;
+}
+.pt40 {
+  padding-top: 40px !important;
+}
+.pb40 {
+  padding-bottom: 40px !important;
+}
+.pl40 {
+  padding-left: 40px !important;
+}
+.pr40 {
+  padding-right: 40px !important;
+}
+.mt45 {
+  margin-top: 45px !important;
+}
+.mb45 {
+  margin-bottom: 45px !important;
+}
+.ml45 {
+  margin-left: 45px !important;
+}
+.mr45 {
+  margin-right: 45px !important;
+}
+.pt45 {
+  padding-top: 45px !important;
+}
+.pb45 {
+  padding-bottom: 45px !important;
+}
+.pl45 {
+  padding-left: 45px !important;
+}
+.pr45 {
+  padding-right: 45px !important;
+}
+.mt50 {
+  margin-top: 50px !important;
+}
+.mb50 {
+  margin-bottom: 50px !important;
+}
+.ml50 {
+  margin-left: 50px !important;
+}
+.mr50 {
+  margin-right: 50px !important;
+}
+.pt50 {
+  padding-top: 50px !important;
+}
+.pb50 {
+  padding-bottom: 50px !important;
+}
+.pl50 {
+  padding-left: 50px !important;
+}
+.pr50 {
+  padding-right: 50px !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* https://css-tricks.com/international-box-sizing-awareness-day/ */
+*, *:before, *:after {
+  /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+  -webkit-box-sizing: border-box;
+  /* Firefox (desktop or Android) 28- */
+  /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+  box-sizing: border-box;
+}
+.oov-input-wrapper {
+  display: inline-block;
+}
+.oov-input-wrapper > div {
+  display: inline-block;
+}
+.oov-input-wrapper input {
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  line-height: 1.5;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  padding: 14px 11px;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  outline: none;
+}
+.oov-input-wrapper input.focused {
+  border: 1px solid #1890ff;
+  outline: none;
+}
+.oov-input-wrapper input.disabled {
+  color: #b1b1b1;
+  background-color: #f7f7f7;
+  border-color: #ececec;
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=OInput.vue.map */

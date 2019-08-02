@@ -13,7 +13,7 @@
 import { oneOf } from "../../utils";
 import Icon from "../icon/Icon.vue";
 // class 前缀
-import { btnClassPrefix } from '../../config/index';
+import { buttonClassPrefix } from '../../config/index';
 
 
 export default {

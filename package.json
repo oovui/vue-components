@@ -1,6 +1,6 @@
 {
   "name": "@oovui/vue",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a UI components library based on vue",
   "author": "itshizhan@163.com",
   "keywords": [
@@ -19,7 +19,8 @@
   "main": "lib/oovui.umd.js",
   "module": "lib/oovui.esm.js",
   "scripts": {
-    "dev": "parcel ./demos/index.html",
+    "dev": "parcel  ./demos/index.html",
+    "build":"rollup --config build/rollup.config.esm.js --watch packages",
     "build:umd": "rollup --config build/rollup.config.umd.js",
     "build:esm": "rollup --config build/rollup.config.esm.js",
     "build:lib": "rm -rf lib && mkdir lib && npm run build:umd && npm run build:esm",
@@ -62,5 +63,10 @@
     "vue-router": "^3.0.6",
     "vue-template-compiler": "^2.6.10",
     "vuepress": "^0.11.0"
-  }
+  },
+  "browserslist": [
+    "> 10%",
+    "last 3 versions",
+    "ie>8"
+  ]
 }
