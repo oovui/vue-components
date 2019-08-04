@@ -4,21 +4,18 @@
     <hr/>
     <div class="content-wrap">
         <div class="left-nav">
-
-          <h4>组件DEMO</h4>  
+          <h4>组件DEMO</h4>
           <hr/>
           <router-link to="/">Home</router-link>
-          <router-link to="/inputDemo">InputDemo</router-link>
+          <router-link :to="menu.to" v-for="(menu,index) of menus" :key="menu.name">
+            {{menu.name}}
+          </router-link>
           <hr/>
           <h4>测试DEMO</h4>
           <hr/>
-          <!--
-          <router-link to="/inputdemo">InputDemo</router-link>
-          <router-link to="/modelDemo">modelDemo</router-link>
-          <router-link to="/buttons">Buttons</router-link>
-          -->
-          <router-link to="/slotdemo">SlotDemo</router-link>
-          
+          <router-link :to="menu.to" v-for="(menu,index) of menusTest" :key="menu.name">
+            {{menu.name}}
+          </router-link>
         </div>
         <div class ="right-demos">
           <router-view></router-view>
@@ -27,13 +24,20 @@
   </div>
 </template>
 <script>
+import { menus, menusTest } from './menus'
 export default {
-  name: 'app'
+  name: 'app',
+  data() {
+    return {
+      menus,
+      menusTest,
+    }
+  },
 }
 </script>
 
 <style lang="scss">
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -43,36 +47,36 @@ body {
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   height: 100%;
 }
 
-
-#app{
-    height: 100%;
+#app {
+  height: 100%;
 }
 
-h1.top{
+h1.top {
   height: 60px;
   line-height: 60px;
   background: #e5f6e7;
   padding-left: 20px;
-  margin: 0!important;
+  margin: 0 !important;
 }
-.content-wrap{
+.content-wrap {
   display: table;
   width: 100%;
   height: 100%;
 }
-.left-nav,.right-demos{
+.left-nav,
+.right-demos {
   display: table-cell;
   vertical-align: top;
 }
 
-.left-nav{
+.left-nav {
   width: 18%;
   background: #e4f5ef;
-  a{
+  a {
     display: block;
     height: 30px;
     line-height: 30px;
@@ -80,7 +84,7 @@ h1.top{
   }
 }
 
-.right-demos{
+.right-demos {
   width: 80%;
   padding: 20px;
 }
