@@ -948,5 +948,10 @@ input[type=checkbox], input[type=radio] {
   border-color: #ececec;
   cursor: not-allowed;
 }
+.oov-input-wrapper input.readonly, .oov-input-wrapper textarea.readonly {
+  color: #b1b1b1;
+  background-color: #f7f7f7;
+  border-color: #ececec;
+}
 
 /*# sourceMappingURL=OInput.vue.map */

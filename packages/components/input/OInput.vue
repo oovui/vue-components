@@ -61,7 +61,8 @@ export default {
       return {
         [`input-${this.type}`]:!!this.type,
         disabled:!!this.$attrs.hasOwnProperty("disabled"),
-        focused:!!this.focused 
+        readonly:!!this.$attrs.hasOwnProperty("readonly"),
+        focused:!!this.focused && !this.$attrs.hasOwnProperty("readonly")
       }
     },
     valueModel:{
@@ -131,6 +132,11 @@ export default {
     background-color: #f7f7f7;
     border-color: #ececec;
     cursor: not-allowed;
+  }
+  input.readonly,textarea.readonly{
+    color: #b1b1b1;
+    background-color: #f7f7f7;
+    border-color: #ececec;
   }
 }
 

@@ -5,6 +5,7 @@
     <o-input v-model="pwd" type="password" />
     <o-input v-model="pwd" type="textarea" autosize rows="4"/>
     <o-input v-model="msg" disabled="disabled" />
+    <o-input v-model="msg" readonly />
     <div>{{msg}} {{pwd}}</div>
   </div>
 </template>
