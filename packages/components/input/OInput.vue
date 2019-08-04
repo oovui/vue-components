@@ -22,6 +22,8 @@
 </template>
 <script>
 import { inputClassPrefix, inputClassCustom } from "../../config/index";
+import { calcTextareaHeight } from '../../utils/index';
+
 export default {
   name: "OInput",
   data () {
@@ -31,6 +33,11 @@ export default {
   },
   mounted(){
     console.log(this.$attrs); 
+    //自动计算高度
+    if(this.type=='textarea'&&this.$attrs.hasOwnProperty('autosize')){
+      let input = this.$refs.input;
+      calcTextareaHeight(input);
+    }
   },
   props:{
     placeholder: {
@@ -89,10 +96,12 @@ export default {
 @import '../../styles/index.scss';
 .oov-input-wrapper{
   display: inline-block;
+  vertical-align: top;
   &>div{
     display: inline-block;
+    vertical-align: top;
   }
-  input{
+  input,textarea{
     width: 100%;
     height: 32px;
     font-size: 14px;
@@ -109,11 +118,15 @@ export default {
     transition: all 0.3s;
     outline: none;
   }
-  input.focused{
+  textarea{
+    padding:5px;
+    height:auto;
+  }
+  input.focused,textarea.focused{
     border: 1px solid $oov-focused-color;
     outline: none;
   }
-  input.disabled{
+  input.disabled,textarea.disabled{
     color: #b1b1b1;
     background-color: #f7f7f7;
     border-color: #ececec;

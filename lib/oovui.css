@@ -909,11 +909,13 @@ input[type=checkbox], input[type=radio] {
 }
 .oov-input-wrapper {
   display: inline-block;
+  vertical-align: top;
 }
 .oov-input-wrapper > div {
   display: inline-block;
+  vertical-align: top;
 }
-.oov-input-wrapper input {
+.oov-input-wrapper input, .oov-input-wrapper textarea {
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -932,11 +934,15 @@ input[type=checkbox], input[type=radio] {
   transition: all 0.3s;
   outline: none;
 }
-.oov-input-wrapper input.focused {
+.oov-input-wrapper textarea {
+  padding: 5px;
+  height: auto;
+}
+.oov-input-wrapper input.focused, .oov-input-wrapper textarea.focused {
   border: 1px solid #1890ff;
   outline: none;
 }
-.oov-input-wrapper input.disabled {
+.oov-input-wrapper input.disabled, .oov-input-wrapper textarea.disabled {
   color: #b1b1b1;
   background-color: #f7f7f7;
   border-color: #ececec;
