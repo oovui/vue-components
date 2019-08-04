@@ -23,5 +23,4 @@ menusTest.map(item => {
   item.to = '/' + item.name
   item.path = '/' + item.name
 })
-export  { menus,menusTest }
-
+export { menus, menusTest }

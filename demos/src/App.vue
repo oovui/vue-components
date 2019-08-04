@@ -7,13 +7,13 @@
           <h4>组件DEMO</h4>
           <hr/>
           <router-link to="/">Home</router-link>
-          <router-link :to="menu.to" v-for="(menu,index) of menus" :key="menu.name">
+          <router-link :to="menu.to" v-for="menu of menus" :key="menu.name">
             {{menu.name}}
           </router-link>
           <hr/>
           <h4>测试DEMO</h4>
           <hr/>
-          <router-link :to="menu.to" v-for="(menu,index) of menusTest" :key="menu.name">
+          <router-link :to="menu.to" v-for="menu of menusTest" :key="menu.name">
             {{menu.name}}
           </router-link>
         </div>
