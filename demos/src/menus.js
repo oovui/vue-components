@@ -1,11 +1,16 @@
 // 构建页面 views目录
 import InputDemo from './views/input.vue'
+import RadioDemo from './views/raido'
 // 以下为本地测试页面，testViews目录
 import SlotDemo from './testViews/SlotDemo.vue'
 let menus = [
   {
     name: 'InputDemo',
     component: InputDemo,
+  },
+  {
+    name: 'RadioDemo',
+    component: RadioDemo,
   },
 ]
 let menusTest = [
