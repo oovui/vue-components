@@ -1,12 +1,15 @@
 import OButton from './components/button/OButton.vue'
 import Icon from './components/icon/Icon.vue'
 import OInput from './components/input/index'
-
+import ORadio from './components/radio/index'
+import ORadioGroup from './components/radio/ORadioGroup.vue'
 
 const components = {
   Icon,
   OButton,
-  OInput
+  OInput,
+  ORadio,
+  ORadioGroup
 }
 
 
