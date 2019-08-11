@@ -41,16 +41,14 @@ export default {
     getCourse() {
       alert(this.course)
     },
-    selectChange(val){
-      console.log("值改变了，当前最新的值为:" + val);
-    }
+    selectChange(val) {
+      console.log('值改变了，当前最新的值为:' + val)
+    },
   },
   watch: {
     favorite(val) {
       console.log(val)
     },
-  }
+  },
 }
 </script>
-
-
