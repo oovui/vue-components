@@ -1,3 +1,7 @@
+
+.oov-icon[data-v-71441546]{
+  display: inline-block;
+}
 @charset "UTF-8";
 article,
 aside,
@@ -451,11 +455,7 @@ input[type=checkbox], input[type=radio] {
   box-sizing: border-box;
 }
 
-/*# sourceMappingURL=OButton.vue.map */
-.oov-icon[data-v-71441546]{
-  display: inline-block;
-}
-@charset "UTF-8";
+/*# sourceMappingURL=OButton.vue.map */@charset "UTF-8";
 article,
 aside,
 details,
