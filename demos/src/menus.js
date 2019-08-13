@@ -4,6 +4,7 @@ import RadioDemo from './views/raido'
 import CheckboxDemo from './views/checkbox'
 // 以下为本地测试页面，testViews目录
 import SlotDemo from './testViews/SlotDemo.vue'
+import InputDemos from './testViews/inputdemos.vue'
 let menus = [
   {
     name: 'InputDemo',
@@ -22,7 +23,10 @@ let menusTest = [
   {
     name: 'SlotDemo',
     component: SlotDemo,
-  },
+  },{
+    name:'InputDemos',
+    component:InputDemos
+  }
 ]
 
 menus.map(item => {
