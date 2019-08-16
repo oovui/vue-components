@@ -2,6 +2,7 @@
 import InputDemo from './views/input.vue'
 import RadioDemo from './views/raido'
 import CheckboxDemo from './views/checkbox'
+import SelectDemo from './views/select'
 // 以下为本地测试页面，testViews目录
 import SlotDemo from './testViews/SlotDemo.vue'
 import InputDemos from './testViews/inputdemos.vue'
@@ -17,6 +18,9 @@ let menus = [
   {
     name:'CheckboxDemo',
     component:CheckboxDemo,
+  },{
+    name:'SelectDemo',
+    component:SelectDemo,
   },
 ]
 let menusTest = [
