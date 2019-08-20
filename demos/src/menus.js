@@ -6,6 +6,7 @@ import SelectDemo from './views/select'
 // 以下为本地测试页面，testViews目录
 import SlotDemo from './testViews/SlotDemo.vue'
 import InputDemos from './testViews/inputdemos.vue'
+import DemoDemos from './testViews/demoDemos'
 let menus = [
   {
     name: 'InputDemo',
@@ -30,6 +31,9 @@ let menusTest = [
   },{
     name:'InputDemos',
     component:InputDemos
+  },{
+    name:'DemoDemos',
+    component:DemoDemos
   }
 ]
 

@@ -5,6 +5,8 @@ import ORadio from './components/radio/index'
 import ORadioGroup from './components/radio/ORadioGroup.vue'
 import OCheckbox from './components/checkbox/index'
 import OCheckboxGroup from './components/checkbox/OCheckboxGroup.vue'
+import OSelect from './components/select/index'
+import OOption from './components/select/OOption.vue'
 
 const components = {
   Icon,
@@ -14,6 +16,8 @@ const components = {
   ORadioGroup,
   OCheckbox,
   OCheckboxGroup,
+  OSelect,
+  OOption
 }
 
 
