@@ -36,11 +36,13 @@ This ui library is Work In Progress, just for study.  Pls do not use it in the p
 - [x] font
 - [x] utilities
 - [x] icon
+- [x] cssicon
 - [x] button
 - [x] grid
 - [x] input
 - [x] radio
 - [x] checkbox
+- [x] tag
 - [ ] tab
 - [ ] dotdotdot
 - [ ] form
