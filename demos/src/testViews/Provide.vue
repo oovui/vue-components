@@ -21,11 +21,11 @@ export default {
 		}   
 	},
 	mounted(){
-		setTimeout(()=>{
-			this.praData.text = 'parData Changed';
-			// this._provided.praText = "new words"; 
-			// console.log( this._provided)
-		},1000)
+		// setTimeout(()=>{
+		// 	this.praData.text = 'parData Changed';
+		// 	// this._provided.praText = "new words"; 
+		// 	// console.log( this._provided)
+		// },1000)
 	},
 	components:{
 		ChildDemo

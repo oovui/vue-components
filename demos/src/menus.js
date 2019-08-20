@@ -3,6 +3,8 @@ import InputDemo from './views/input.vue'
 import RadioDemo from './views/raido'
 import CheckboxDemo from './views/checkbox'
 import SelectDemo from './views/select'
+import CssiconDemo from './views/cssicon'
+import TagDemo from './views/tag'
 // 以下为本地测试页面，testViews目录
 import SlotDemo from './testViews/SlotDemo.vue'
 import InputDemos from './testViews/inputdemos.vue'
@@ -22,7 +24,13 @@ let menus = [
   },{
     name:'SelectDemo',
     component:SelectDemo,
-  },
+  },{
+    name:'CssiconDemo',
+    component:CssiconDemo
+  },{
+    name:'TagDemo',
+    component:TagDemo
+  }
 ]
 let menusTest = [
   {
