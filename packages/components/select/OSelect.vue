@@ -1,10 +1,12 @@
 <template>
   <div class="oov-select oov-select-custom" 
     :style="`width:${width}px`"
-    @click.stop="selectClick">
+    @click.stop="selectClick"
+    v-clickoutside="closeSelect">
     <!-- 选择区 -->
     <div class="select-section">
-      <span>请选择</span>
+      <span v-show="placeholder&&!singleSelectedValue">{{placeholder}}</span>
+      <span v-show="singleSelectedValue">{{singleSelectedValue}}</span>
     </div>
     <!-- dropdown下拉区 -->
     <transition>
@@ -24,24 +26,74 @@ export default {
     disabled:{
       type: Boolean,
       default: false
+    },
+    value:{},
+    placeholder: {
+      type: String
+    },
+    multiple: {
+      type: Boolean,
+      default: false
+    },
+    clearable: {
+      type: Boolean,
+      default: false
+    },
+    filterable: {
+      type: Boolean,
+      default: false
+    },
+    filterTip:{
+      type:String,
+      default:'无匹配数据'
     }
+  },
+  model:{
+    prop:'value',
+    event:'change'
   },
   provide(){
     return {
-      'select':this
+      'select':this,
+      'selectLabel':this.modelObject
     }
   },
   data(){
     return {
       showOptions: false,
+      // singleSelectedValue: '',
+      multipleSelectedValue: [],
+      modelObject:{
+        value:''
+      }
     }
+  },
+  computed:{
+    singleSelectedValue(){
+      return this.modelObject.value
+    }
+  },
+  watch:{
+    
   },
   methods:{
     selectClick(){
       if(this.disabled) return
       // if(this.showOptions) return
       this.showOptions =  !this.showOptions
+    },
+    closeSelect(){
+      this.showOptions = false;
+    },
+    selectModelChangeHandle(){
+      console.log("selectModelChangeHandle");
     }
+  },
+  mounted(){
+    console.log("select mounted")
+    console.log("v-model:",this.value);
+    console.log(this.modelObject)
+
   }
 }
 </script>
@@ -87,7 +139,7 @@ export default {
     position: absolute;
     left: 0;
     top: 34px;
-    transition: all 0.3s;
+    transition: all 0.1s;
   }
 }
 </style>

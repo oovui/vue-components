@@ -10,7 +10,7 @@
 <script>
 export default {
 	name:'OOption',
-	inject: ['select'],
+	inject: ['select','selectLabel'],
 	props:{
 		value:{
       required: true
@@ -31,14 +31,21 @@ export default {
 	},
 	methods: {
     doSelect () {
-      console.log(this.value)
+      console.log(this.value,this.$slots.default[0].text);
+      this.select.showOptions = false;
+      this.selectLabel.value = this.$slots.default[0].text;
+      //change parent select v-model
+      this.select.$emit('change',this.value);
     },
     blur () {
       this.isFocus = false
     }
   },
   mounted(){
-    console.log(this.select)
+    console.log("option mounted:")
+    if(this.select.value==this.value){
+      this.selectLabel.value = this.$slots.default[0].text;
+    }
   }
 }
 </script>
