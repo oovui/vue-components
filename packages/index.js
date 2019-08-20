@@ -7,9 +7,14 @@ import OCheckbox from './components/checkbox/index'
 import OCheckboxGroup from './components/checkbox/OCheckboxGroup.vue'
 import OSelect from './components/select/index'
 import OOption from './components/select/OOption.vue'
+import OCssicon from './components/cssicon/OCssicon.vue'
+import OTag from './components/tag/Otag.vue'
+// directives
+import clickoutside from './directives/clickoutside.js'
 
 const components = {
   Icon,
+  OCssicon,
   OButton,
   OInput,
   ORadio,
@@ -17,7 +22,8 @@ const components = {
   OCheckbox,
   OCheckboxGroup,
   OSelect,
-  OOption
+  OOption,
+  OTag
 }
 
 
@@ -26,6 +32,9 @@ const install =  function (Vue) {
   Object.keys(components).forEach(key => {
     Vue.component(key, components[key]);
   });
+
+  Vue.directive('clickoutside', clickoutside)
+
 
 }
 
