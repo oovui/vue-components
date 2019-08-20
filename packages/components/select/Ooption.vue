@@ -33,19 +33,35 @@ export default {
     doSelect () {
       console.log(this.value,this.$slots.default[0].text);
       this.select.showOptions = false;
-      this.selectLabel.value = this.$slots.default[0].text;
-      //change parent select v-model
-      this.select.$emit('change',this.value);
+      let modelValue = this.select.value
+      if(modelValue instanceof Array){
+        this.selectLabel.value.push(this.$slots.default[0].text);
+        this.select.$emit('change',this.value);
+      }else{
+        this.selectLabel.value = this.$slots.default[0].text;
+        //change parent select v-model
+        this.select.$emit('change',this.value);
+      }
+     
     },
     blur () {
       this.isFocus = false
     }
   },
   mounted(){
-    console.log("option mounted:")
-    if(this.select.value==this.value){
-      this.selectLabel.value = this.$slots.default[0].text;
+    let modelValue = this.select.value
+    if(modelValue instanceof Array){
+      console.log("multiple")
+      if(modelValue.includes(this.value)){
+        this.selectLabel.value.push(this.$slots.default[0].text);
+      }
+    }else{
+      console.log("single")
+      if(modelValue==this.value){
+        this.selectLabel.value = this.$slots.default[0].text;
+      }
     }
+    
   }
 }
 </script>

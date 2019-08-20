@@ -19,7 +19,7 @@ export default {
   },
   methods:{
     closeHandle(event){
-      this.$emit('close',event)
+      this.$emit('close',event,this.$slots.default[0].text)
     }
   }
 }

@@ -988,6 +988,9 @@ input[type=checkbox], input[type=radio] {
 .oov-select .select-section:hover {
   border: 1px solid #1890ff;
 }
+.oov-select .select-section .oov-tag {
+  margin-right: 2px;
+}
 .oov-select .selct-dropdown {
   width: 100%;
   list-style: none;

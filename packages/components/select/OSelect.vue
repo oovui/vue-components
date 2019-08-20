@@ -4,9 +4,14 @@
     @click.stop="selectClick"
     v-clickoutside="closeSelect">
     <!-- 选择区 -->
-    <div class="select-section">
+    <div class="select-section single" v-if="!this.multiple">
       <span v-show="placeholder&&!singleSelectedValue">{{placeholder}}</span>
       <span v-show="singleSelectedValue">{{singleSelectedValue}}</span>
+    </div>
+    <div class="select-section multiple" v-if="this.multiple">
+      <span v-show="placeholder&&multipleSelectedValue.length==0">{{placeholder}}</span>
+      <!-- <span v-show="multipleSelectedValue.length>0">{{multipleSelectedValue}}</span> -->
+      <o-tag closable v-for="(item,index) of multipleSelectedValue" :key="index" @close="deleteItem">{{item}}</o-tag>
     </div>
     <!-- dropdown下拉区 -->
     <transition>
@@ -61,15 +66,16 @@ export default {
   data(){
     return {
       showOptions: false,
-      // singleSelectedValue: '',
-      multipleSelectedValue: [],
       modelObject:{
-        value:''
+        value:this.multiple?[]:''
       }
     }
   },
   computed:{
     singleSelectedValue(){
+      return this.modelObject.value
+    },
+    multipleSelectedValue(){
       return this.modelObject.value
     }
   },
@@ -87,13 +93,23 @@ export default {
     },
     selectModelChangeHandle(){
       console.log("selectModelChangeHandle");
+    },
+    //删除选项
+    deleteItem(e,tagName){
+      console.log("deleteItem",tagName);
+      for(let i=0;i<this.modelObject.value.length;i++){
+        if(this.modelObject.value[i]===tagName){
+          this.modelObject.value.splice(i, 1);
+          this.$emit('change',this.modelObject.value);
+        }
+      }
     }
   },
   mounted(){
     console.log("select mounted")
+    console.log("this multiple:",this.multiple);
     console.log("v-model:",this.value);
     console.log(this.modelObject)
-
   }
 }
 </script>
@@ -120,6 +136,9 @@ export default {
     padding: 0 8px;
     &:hover{
       border:1px solid $oov-focused-color;
+    }
+    .oov-tag{
+      margin-right: 2px;
     }
   }
 
