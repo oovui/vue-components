@@ -12,6 +12,9 @@
 export default {
   name: 'OTag',
   props:{
+    value:{
+      default:''
+    },
     closable:{
       type:Boolean,
       default:false
@@ -19,7 +22,10 @@ export default {
   },
   methods:{
     closeHandle(event){
-      this.$emit('close',event,this.$slots.default[0].text)
+      this.$emit('close',event,{
+        label:this.$slots.default[0].text,
+        value:this.value
+      })
     }
   }
 }

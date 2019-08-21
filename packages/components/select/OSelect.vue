@@ -1,21 +1,22 @@
 <template>
   <div class="oov-select oov-select-custom" 
     :style="`width:${width}px`"
+    :class="selectClasses"
     @click.stop="selectClick"
     v-clickoutside="closeSelect">
     <!-- 选择区 -->
-    <div class="select-section single" v-if="!this.multiple">
+    <div class="select-section single" ref="selectSection" v-if="!this.multiple">
       <span v-show="placeholder&&!singleSelectedValue">{{placeholder}}</span>
       <span v-show="singleSelectedValue">{{singleSelectedValue}}</span>
     </div>
-    <div class="select-section multiple" v-if="this.multiple">
+    <div class="select-section multiple" ref="selectSection" v-if="this.multiple">
       <span v-show="placeholder&&multipleSelectedValue.length==0">{{placeholder}}</span>
       <!-- <span v-show="multipleSelectedValue.length>0">{{multipleSelectedValue}}</span> -->
-      <o-tag closable v-for="(item,index) of multipleSelectedValue" :key="index" @close="deleteItem">{{item}}</o-tag>
+      <o-tag closable :value="item.value" v-for="item of multipleSelectedValue" :key="item.value" @close="deleteItem">{{item.label}}</o-tag>
     </div>
     <!-- dropdown下拉区 -->
     <transition>
-      <ul class="selct-dropdown" v-show="showOptions" >
+      <ul class="selct-dropdown" v-show="showOptions" :style="`top:${selectHeight}px`">
         <slot></slot>
       </ul>
     </transition>
@@ -60,30 +61,35 @@ export default {
   provide(){
     return {
       'select':this,
-      'selectLabel':this.modelObject
+      'selectedObject':this.selectedObject
     }
   },
   data(){
     return {
       showOptions: false,
-      modelObject:{
-        value:this.multiple?[]:''
-      }
+      // selectedObject:this.multiple?[{value:'',label:''}]:{value:'',label:''}        
+      selectedObject:this.multiple?[]:{},
+      selectHeight:34         
     }
   },
   computed:{
+    selectClasses(){
+      return this.multiple?'multiple':'single'
+    },
     singleSelectedValue(){
-      return this.modelObject.value
+      return this.selectedObject
     },
     multipleSelectedValue(){
-      return this.modelObject.value
+      //[{value:'',label:''}]
+      return this.selectedObject
     }
-  },
-  watch:{
-    
   },
   methods:{
     selectClick(){
+      if(this.multiple){
+        let selectSection = this.$refs.selectSection;
+        this.selectHeight = Number(selectSection.offsetHeight) + 4;
+      }
       if(this.disabled) return
       // if(this.showOptions) return
       this.showOptions =  !this.showOptions
@@ -94,22 +100,33 @@ export default {
     selectModelChangeHandle(){
       console.log("selectModelChangeHandle");
     },
-    //删除选项
-    deleteItem(e,tagName){
-      console.log("deleteItem",tagName);
-      for(let i=0;i<this.modelObject.value.length;i++){
-        if(this.modelObject.value[i]===tagName){
-          this.modelObject.value.splice(i, 1);
-          this.$emit('change',this.modelObject.value);
+    //删除多选的选项
+    deleteItem(e,tagData){
+      console.log("deleteItem",tagData);
+      console.log(this.selectedObject)
+      //update selectedObject
+      for(let i=0;i<this.selectedObject.length;i++){
+        if(this.selectedObject[i].value===tagData.value){
+          this.selectedObject.splice(i, 1);
+          break;
         }
       }
+      //update modelValue/v-model
+      for(let i=0;i<this.value.length;i++){
+        if(this.value[i]==tagData.value){
+          this.value.splice(i,1);
+          this.$emit('change',this.value);
+          break;
+        }
+      }
+      this.showOptions = false;
     }
   },
   mounted(){
     console.log("select mounted")
     console.log("this multiple:",this.multiple);
     console.log("v-model:",this.value);
-    console.log(this.modelObject)
+    console.log(this.selectedObject)
   }
 }
 </script>
@@ -141,6 +158,10 @@ export default {
       margin-right: 2px;
     }
   }
+  .select-section.multiple{
+    min-height: 30px;
+    height: auto;
+  }
 
   .selct-dropdown{
     width: 100%;
@@ -157,8 +178,12 @@ export default {
     z-index: 9999;
     position: absolute;
     left: 0;
-    top: 34px;
+    // top: 34px;
     transition: all 0.1s;
   }
+}
+.oov-select.multiple{
+  height: auto;
+  min-height: 30px;
 }
 </style>

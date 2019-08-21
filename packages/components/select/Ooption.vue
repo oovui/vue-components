@@ -8,9 +8,10 @@
 	</li>
 </template>
 <script>
+import { ArrayObjectHasValue,ArrayObjectDeleteByValue, ArrayDeleteByValue } from '../../utils/ArrayUtil.js'
 export default {
 	name:'OOption',
-	inject: ['select','selectLabel'],
+	inject: ['select','selectedObject'],
 	props:{
 		value:{
       required: true
@@ -31,18 +32,29 @@ export default {
 	},
 	methods: {
     doSelect () {
-      console.log(this.value,this.$slots.default[0].text);
+      //console.log(this.value,this.$slots.default[0].text);
       this.select.showOptions = false;
-      let modelValue = this.select.value
+      let modelValue = this.select.value;
       if(modelValue instanceof Array){
-        this.selectLabel.value.push(this.$slots.default[0].text);
-        this.select.$emit('change',this.value);
+        //多选的情况下，已经存在则删除，否则添加
+        let selectedObject = this.selectedObject;
+        if(ArrayObjectHasValue(selectedObject,this.value)){
+          selectedObject = ArrayObjectDeleteByValue(selectedObject,this.value);
+          modelValue = ArrayDeleteByValue(modelValue,this.value);
+        }else{
+          selectedObject.push({
+            value:this.value,
+            label: this.$slots.default[0].text
+          })
+          modelValue.push(this.value);
+        }
+        this.select.$emit('change',modelValue);
+        
       }else{
-        this.selectLabel.value = this.$slots.default[0].text;
+        this.selectedObject.value = this.$slots.default[0].text;
         //change parent select v-model
         this.select.$emit('change',this.value);
       }
-     
     },
     blur () {
       this.isFocus = false
@@ -50,15 +62,20 @@ export default {
   },
   mounted(){
     let modelValue = this.select.value
+    console.log("v-model:",modelValue);
     if(modelValue instanceof Array){
       console.log("multiple")
       if(modelValue.includes(this.value)){
-        this.selectLabel.value.push(this.$slots.default[0].text);
+        this.selectedObject.push({
+          value:this.value,
+          label:this.$slots.default[0].text
+        });
       }
+
     }else{
       console.log("single")
       if(modelValue==this.value){
-        this.selectLabel.value = this.$slots.default[0].text;
+        this.selectedObject.value = this.$slots.default[0].text;
       }
     }
     
