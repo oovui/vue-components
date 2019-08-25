@@ -5,6 +5,7 @@ import CheckboxDemo from './views/checkbox'
 import SelectDemo from './views/select'
 import CssiconDemo from './views/cssicon'
 import TagDemo from './views/tag'
+import SwitchDemo from './views/switch'
 // 以下为本地测试页面，testViews目录
 import SlotDemo from './testViews/SlotDemo.vue'
 import InputDemos from './testViews/inputdemos.vue'
@@ -30,6 +31,9 @@ let menus = [
   },{
     name:'TagDemo',
     component:TagDemo
+  },{
+    name:'Switch',
+    component:SwitchDemo
   }
 ]
 let menusTest = [

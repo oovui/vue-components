@@ -9,6 +9,7 @@ import OSelect from './components/select/index'
 import OOption from './components/select/OOption.vue'
 import OCssicon from './components/cssicon/OCssicon.vue'
 import OTag from './components/tag/Otag.vue'
+import OSwitch from './components/switch/index'
 // directives
 import clickoutside from './directives/clickoutside.js'
 
@@ -23,7 +24,8 @@ const components = {
   OCheckboxGroup,
   OSelect,
   OOption,
-  OTag
+  OTag,
+  OSwitch
 }
 
 
