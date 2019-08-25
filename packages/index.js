@@ -10,6 +10,9 @@ import OOption from './components/select/OOption.vue'
 import OCssicon from './components/cssicon/OCssicon.vue'
 import OTag from './components/tag/Otag.vue'
 import OSwitch from './components/switch/index'
+import ORate from './components/rate/index'
+import OSlider from './components/slider/index'
+import OUpload from './components/upload/index'
 // directives
 import clickoutside from './directives/clickoutside.js'
 
@@ -25,7 +28,10 @@ const components = {
   OSelect,
   OOption,
   OTag,
-  OSwitch
+  OSwitch,
+  ORate,
+  OSlider,
+  OUpload
 }
 
 
