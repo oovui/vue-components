@@ -19,7 +19,6 @@
   "main": "lib/oovui.umd.js",
   "module": "lib/oovui.esm.js",
   "scripts": {
-    "dev": "parcel  ./demos/index.html",
     "build":"rollup --config build/rollup.config.esm.js --watch packages",
     "build:umd": "rollup --config build/rollup.config.umd.js",
     "build:esm": "rollup --config build/rollup.config.esm.js",
