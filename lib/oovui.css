@@ -2027,7 +2027,21 @@ input[type=checkbox], input[type=radio] {
   font-size: 12px;
   margin-left: 24px;
   margin-right: 6px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 22px;
+}
+.oov-switch .switch-inner i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .oov-switch.checked {
   background-color: #1890ff;

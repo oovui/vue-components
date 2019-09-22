@@ -79,7 +79,13 @@ export default {
     font-size: 12px;
     margin-left: 24px;
     margin-right: 6px;
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 22px;
+    i{
+      display: flex;
+      align-items: center;
+    }
   }
 
   // selected styles
@@ -91,7 +97,7 @@ export default {
      margin-left: -1px;
     }
     .switch-inner{
-       margin-left: 6px;
+      margin-left: 6px;
     }
 
   }

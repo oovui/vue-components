@@ -1,5 +1,5 @@
 import OButton from './components/button/OButton.vue'
-import Icon from './components/icon/Icon.vue'
+import OIcon from './components/icon/Icon.vue'
 import OInput from './components/input/index'
 import ORadio from './components/radio/index'
 import ORadioGroup from './components/radio/ORadioGroup.vue'
@@ -17,7 +17,7 @@ import OUpload from './components/upload/index'
 import clickoutside from './directives/clickoutside.js'
 
 const components = {
-  Icon,
+  OIcon,
   OCssicon,
   OButton,
   OInput,
