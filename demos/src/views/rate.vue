@@ -1,6 +1,6 @@
 <template>
   <div>
-    <o-rate></o-rate>
+    <o-rate icon-size="20"></o-rate>
   </div>
 </template>
 <script>

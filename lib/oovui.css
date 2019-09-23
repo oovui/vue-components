@@ -2057,4 +2057,13 @@ input[type=checkbox], input[type=radio] {
   margin-left: 6px;
 }
 
-/*# sourceMappingURL=OSwitch.vue.map */
+/*# sourceMappingURL=OSwitch.vue.map */.oov-rate ul.rate-list {
+  list-style: none;
+}
+.oov-rate ul.rate-list li {
+  display: inline-block;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=ORate.vue.map */
