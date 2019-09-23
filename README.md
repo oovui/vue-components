@@ -45,16 +45,22 @@ This ui library is Work In Progress, just for study.  Pls do not use it in the p
 - [x] tag
 - [x] switch
 - [x] select
-- [ ] tab
-- [ ] dotdotdot
-- [ ] form
+- [x] rate
 - [ ] alert
 - [ ] message
 - [ ] modal
+- [ ] page
+- [ ] tab
+- [ ] upload
+- [ ] tooltip
+- [ ] popover
+- [ ] carousel
+- [ ] dotdotdot
+- [ ] form
 - [ ] layout
 - [ ] datepicker
 - [ ] list
-- [ ] page
+
 
 
 
