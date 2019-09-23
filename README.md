@@ -44,6 +44,7 @@ This ui library is Work In Progress, just for study.  Pls do not use it in the p
 - [x] checkbox
 - [x] tag
 - [x] switch
+- [x] select
 - [ ] tab
 - [ ] dotdotdot
 - [ ] form
@@ -52,7 +53,6 @@ This ui library is Work In Progress, just for study.  Pls do not use it in the p
 - [ ] modal
 - [ ] layout
 - [ ] datepicker
-- [ ] select
 - [ ] list
 - [ ] page
 
