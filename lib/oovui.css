@@ -466,7 +466,25 @@ input[type=checkbox], input[type=radio] {
   color: rgba(0, 0, 0, 0.65);
 }
 
-/*# sourceMappingURL=OOption.vue.map */.oov-cssicon {
+/*# sourceMappingURL=OOption.vue.map */.oov-tag {
+  display: inline-block;
+  line-height: 22px;
+  height: 22px;
+  padding: 0 7px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  background: #fafafa;
+  font-size: 12px;
+  cursor: pointer;
+}
+.oov-tag .tag-text {
+  display: inline-block;
+  line-height: 20px;
+  height: 20px;
+  vertical-align: top;
+}
+
+/*# sourceMappingURL=Otag.vue.map */.oov-cssicon {
   display: inline-block;
   outline: none;
   height: 1em;
@@ -508,25 +526,7 @@ input[type=checkbox], input[type=radio] {
           transform: translate(-50%, -50%) rotate(45deg);
 }
 
-/*# sourceMappingURL=OCssicon.vue.map */.oov-tag {
-  display: inline-block;
-  line-height: 22px;
-  height: 22px;
-  padding: 0 7px;
-  border-radius: 4px;
-  border: 1px solid #d9d9d9;
-  background: #fafafa;
-  font-size: 12px;
-  cursor: pointer;
-}
-.oov-tag .tag-text {
-  display: inline-block;
-  line-height: 20px;
-  height: 20px;
-  vertical-align: top;
-}
-
-/*# sourceMappingURL=Otag.vue.map */@charset "UTF-8";
+/*# sourceMappingURL=OCssicon.vue.map */@charset "UTF-8";
 article,
 aside,
 details,
