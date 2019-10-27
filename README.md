@@ -46,6 +46,7 @@ This ui library is Work In Progress, just for study.  Pls do not use it in the p
 - [x] switch
 - [x] select
 - [x] rate
+- [ ] page
 - [ ] alert
 - [ ] message
 - [ ] modal
